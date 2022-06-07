@@ -1,15 +1,19 @@
-<h1>Articles</h1>
+<div class="heading">Articles</div>
+<div class="new"><%= link_to "New Article", new_article_path %></div> 
 
-Our blog has <%= Article.public_count %> articles and counting!
 
-<ul>
+<div class="counter">Our blog has <%= Article.public_count %> articles and counting!</div>
+
+<div class="articles">
     <% @articles.each do |article| %>
         <% unless article.archived? %>          
-            <li>
-                <%= link_to article.title, article %>
-            </li>
+            <div class="article-container">
+                <div class="article-title"><%= article.title %></div>
+                <div class="article-body"><%= article.body %></div>
+                <div class="read-more"><%= link_to "Read More", article %></div>
+            </div>
         <% end %>
     <% end %>
-</ul>
+</div>
 
-<%= link_to "New Article", new_article_path %>
+
