@@ -1,8 +1,7 @@
-<div class="heading">Articles</div>
-<div class="new"><%= link_to "New Article", new_article_path %></div> 
-
-
-<div class="counter">Our blog has <%= Article.public_count %> articles and counting!</div>
+<div class="row-top">
+    <div class="col"><h1>Articles</h1></div>
+    <div class="col"><%= link_to "New Article", new_article_path %></div> 
+</div>
 
 <div class="articles">
     <% @articles.each do |article| %>

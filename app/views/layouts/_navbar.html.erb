@@ -1,5 +1,7 @@
-<ul class="nav nav-pills">
-  <li class="nav-item">
+<nav class="navbar">
+  <div class="container">
     <%= link_to 'Home', root_path %>
-    </li>    
-</ul>
+    <div class="counter">Our blog has <%= Article.public_count %> articles and counting!</div>  
+  </div>   
+  
+</nav>
